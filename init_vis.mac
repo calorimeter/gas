@@ -1,0 +1,48 @@
+# Macro file for the initialization of example B4
+# in interactive session
+#
+# Set some default verbose
+#
+/control/verbose 0
+/control/saveHistory
+/run/verbose 0
+/vis/verbose 0
+#
+# Change the default number of threads (in multi-threaded mode)
+#/run/numberOfThreads 4
+#
+
+#/testem/phys/addPhysics empenelope
+#/testem/phys/addPhysics emlowenergy
+
+#Set the type of gas
+#/testem/setGasThick 500 um
+#/testem/setWindowThick 2 um
+#/testem/setGasRad 30 cm
+#/testem/setAmountOfLayers 600
+#/testem/setAbsorberThick 5 cm
+
+/testem/setGasMat TRT_CO2
+
+#MATERIAL OPTIONS ARE:
+#G4_Ar, G4_Kr, G4_Xe
+#G4_CARBON_DIOXIDE, G4_MYLAR, G4_METHANE, G4_PROPANE
+#Kr7CH4, TRT_Xe, TRT_CO2, TRT_CF4
+#ATLAS TRT straw tube gas mixture: XeCO2CF4
+#C3H8mXeCH4C3H8 (Mainly Xenon, 7.5% CH4, 5% C3H8, 1 atm 20 C)
+#Ar7CH4 (7% CH4, 1 atm 20 C)
+#ArCO2 (20% CO2, STP), Xe20CO2, Kr20CO2 (also STP)
+#ALICE mixture: TPC_Ne-CO2-2
+
+/testem/killSecondaries false
+#/cuts/setLowEdge 250 eV
+# Initialize kernel
+/run/initialize
+#
+# Visualization setting
+#/gun/particle e-
+#/gun/energy 1 GeV
+#/run/beamOn 1000
+/control/execute vis.mac
+
+
