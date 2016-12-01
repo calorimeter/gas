@@ -78,8 +78,8 @@ G4ClassificationOfNewTrack
 StackingAction::ClassifyNewTrack(const G4Track* aTrack)
 {
 
-	if(aTrack->GetCreatorProcess() && aTrack->GetCreatorProcess()->GetProcessName() != "eIoni")
-		G4cout << "created a new " << aTrack->GetParticleDefinition()->GetParticleName() << " of " << aTrack->GetKineticEnergy() << " MeV through " << aTrack->GetCreatorProcess()->GetProcessName() << G4endl;
+//	if(aTrack->GetCreatorProcess() && aTrack->GetCreatorProcess()->GetProcessName() != "eIoni")
+//		G4cout << "created a new " << aTrack->GetParticleDefinition()->GetParticleName() << " of " << aTrack->GetKineticEnergy() << " MeV through " << aTrack->GetCreatorProcess()->GetProcessName() << G4endl;
 	if( aTrack->GetDefinition()==G4OpticalPhoton::OpticalPhotonDefinition() )
 	{
 		DetectorConstruction* c = (DetectorConstruction*) G4RunManager::GetRunManager()->GetUserDetectorConstruction();
