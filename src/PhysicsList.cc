@@ -75,7 +75,7 @@
 #include "G4LossTableManager.hh"
 #include "G4ProductionCutsTable.hh"
 #include "G4EmConfigurator.hh"
-#include "G4EmParameters.hh"
+//#include "G4EmParameters.hh"
 
 #include "StepMax.hh"
 
@@ -96,7 +96,7 @@ PhysicsList::PhysicsList() : G4VModularPhysicsList(),
   fMessenger(0),
   fPAI(false)
 {
-  G4EmParameters::Instance()->SetVerbose(1);
+  //G4EmParameters::Instance()->SetVerbose(1);
 
   SetDefaultCutValue(1*mm);
  
